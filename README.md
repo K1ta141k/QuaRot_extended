@@ -1,7 +1,7 @@
 ## QuaRot Extensions
 Ali Bauyrzhan, Dacia John, Abhinaya Menon
 
-We have reproduced the paper results and have extended added two implementations of our custom methodologies. The detailed information is in the QuaRotExtension.pdf and the QuaRotExtension.pptx files.
+We have reproduced the paper results and have extended added two implementations of our custom methodologies. The detailed information is in the slides and in the pdf reports.
 
 ## Requirements for running Llama-2-7b-hf
 GPU with at least 25GB GPU Memory, 11 TFLOPS.
