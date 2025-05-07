@@ -1,5 +1,6 @@
 ## Matrix Optimization
 ### Usage
+Install all the requirements that are listed in the main directory
 ``` bash
 pip install -r requirements.txt
 python train_on_act.py --threshold {} --power {} --num_epochs {}
