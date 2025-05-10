@@ -10,6 +10,7 @@ The generated matrix will be saved in the new saved_tensors directory. Get the a
 def get_orthogonal_matrix(size, mode, device=utils.DEV):
     path_to_matrix = "path/to/matrix"
     matrix = torch.load(path_to_matrix).to(device=device).to(dtype=torch.float64)
+    return matrix
     if mode == 'random':
         return random_orthogonal_matrix(size, device)
     elif mode == 'hadamard':
