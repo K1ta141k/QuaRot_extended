@@ -40,7 +40,7 @@ def get_c4_new(nsamples, seed, seqlen, model, hf_token=None, eval_mode=False):
         valenc = tokenizer(' '.join(valdata[:1100]['text']), return_tensors='pt')
         valenc = valenc.input_ids[:, :(256 * seqlen)]
         class TokenizerWrapper:
-            def _init_(self, input_ids):
+            def __init__(self, input_ids):
                 self.input_ids = input_ids
         valenc = TokenizerWrapper(valenc)
         return valenc
