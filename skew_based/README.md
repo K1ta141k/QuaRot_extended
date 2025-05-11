@@ -2,7 +2,7 @@
 ### Usage
 **Instructions for skew logic: **
 
-After cloning the original git repository in the main ReadMe file, navigate to the fake_quant directory 
+After cloning the original git repository in the main ReadMe file, install fast_hadamard_transform with "pip install fast_hadamard_transform" then navigate to the fake_quant directory 
 Replace the files in the fake_quant directory with these files that has the corresponding names.
 To run the perplexity of `LLaMA2-7B` model with quantizing all weights and activations while using the skew logic, you can run the following command:
 python main.py --model meta-llama/Llama-2-7b-hf  --rotate --a_bits 4 --v_bits 4 --k_bits 4 --w_bits 4 --w_clip --a_auto_asym 
