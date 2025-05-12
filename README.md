@@ -1,6 +1,8 @@
 ## QuaRot Extensions
 Ali Bauyrzhan, Dacia John, Abhinaya Menon
 
+Note: There are two extensions that were implemented and they have been implemented on different requirements therefore it is suggested that you create two separate environments when testing each of the extensions. 
+
 We have reproduced the paper results and have extended added two implementations of our custom methodologies. The detailed information is in the slides and in the pdf reports.
 
 ## Requirements for running Llama-2-7b-hf
