@@ -10,7 +10,7 @@ python train_on_act.py --threshold {} --power {} --num_epochs {}
 ```
 An example code of how to call it with values would be: 
 ```
-python train_on_act.py --threshold {} --power {} --num_epochs {}
+python train_on_act.py --threshold 2 --power 2 --num_epochs 1
 ```
 The generated matrix will be saved in the new saved_tensors directory. The matrix will me saved in a path that looks like the following: 
 ```
