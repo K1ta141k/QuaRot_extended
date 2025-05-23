@@ -2,23 +2,49 @@
 ### Usage
 **Instructions for skew logic: **
 
-After cloning the original git repository in the main ReadMe file, install fast_hadamard_transform with:
+If you have not completed the instructions in the main readme file to set up the environment then set up an environment with python=3.11 (this can be done using conda) and clone the main repository with the original code and install the original requirements with the instructions below
 ```
-pip install fast_hadamard_transform
+git clone https://github.com/K1ta141k/QuaRot.git
+cd QuaRot
+pip install -r requirements.txt
+pip install -e . 
+```
+While inside the QuaRot directory,  clone the QuaRot_extended repo with the following code
+
+```
+git clone https://github.com/K1ta141k/QuaRot_extended.git
+```
+Move to the QuaRot_extended repo and navigate to skew_based with the following
+
+```
+cd QuaRot_extended
+cd skew_based 
 ```
 
-Then navigate to the fake_quant directory and replace the files in the fake_quant directory with these files that has the corresponding names.
+Navigate to the fake_quant directory and replace the files in the fake_quant directory with these files that has the corresponding names from the skew_based directory. These files are main.py, data_utils.py, skew_utils.py, utils.py. You can replace these files with the following template: 
+
+```
+cp /path/to/source/main.py /path/to/destination/main.py
+```
+
+An example of the command used to replace files would look like the following 
+```
+cp /root/QuaRot/QuaRot_extended/skew_based/main.py /root/QuaRot/fake_quant/main.py 
+cp /root/QuaRot/QuaRot_extended/skew_based/data_utils.py /root/QuaRot/fake_quant/data_utils.py 
+cp /root/QuaRot/QuaRot_extended/skew_based/skew_utils.py /root/QuaRot/fake_quant/skew_utils.py 
+cp /root/QuaRot/QuaRot_extended/skew_based/utils.py /root/QuaRot/fake_quant/utils.py 
+```
+
+The skew logic can be tested by adding the following flag in addition to calling the original code: 
+‘—a_auto_asym’ this implements the skew logic that automatically deciphers between the type of quantization 
+
+
 To run the perplexity of `LLaMA2-7B` model with quantizing all weights and activations while using the skew logic, you can run the following command:
 ```
 python main.py --model meta-llama/Llama-2-7b-hf  --rotate --a_bits 4 --v_bits 4 --k_bits 4 --w_bits 4 --w_clip --a_auto_asym 
 ```
 
-The skew logic can be tested by adding the following flag in addition to calling the original code: 
-‘—a_auto_asym’ this implements the skew logic that deciphers between the type of quantization 
-
-
-
-Original instructions: 
+Original QuaRot Readme instructions: 
 
 # Fake Quantization in QuaRot
 In this directory, we provide the torch scripts for the experiments in QuaRot. 
@@ -54,5 +80,6 @@ For example, to run the perplexity of `LLaMA2-7B` model with quantizing all weig
 ```bash
 /bin/python main.py --model meta-llama/Llama-2-7b-hf  --rotate --a_bits 4 --v_bits 4 --k_bits 4 --w_bits 4 --w_clip
 ```
+
 
 
