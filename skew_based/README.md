@@ -34,6 +34,11 @@ cp /root/QuaRot/QuaRot_extended/skew_based/data_utils.py /root/QuaRot/fake_quant
 cp /root/QuaRot/QuaRot_extended/skew_based/skew_utils.py /root/QuaRot/fake_quant/skew_utils.py 
 cp /root/QuaRot/QuaRot_extended/skew_based/utils.py /root/QuaRot/fake_quant/utils.py 
 ```
+Commands to return to fake_quant to run the original script: 
+```
+cd ../..
+cd fake_quant/
+```
 
 The skew logic can be tested by adding the following flag in addition to calling the original code: 
 ‘—a_auto_asym’ this implements the skew logic that automatically deciphers between the type of quantization 
